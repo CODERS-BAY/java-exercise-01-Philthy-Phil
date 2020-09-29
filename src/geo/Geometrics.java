@@ -1,58 +1,95 @@
 package geo;
+
+//import java.util.Scanner;
+
 public class Geometrics {
-    private static double x = 10.0;
-    private static double y = 5.0;
-    private static double z = 3.0;
-    private static int x1 = 8;
-    private static int y1 = 7;
-    private static int z1 = 10;
-    private static int x2 = 100;
-    private static int y2 = 57;
-    private static int z2 = 129;
-    private static int x3 = 45;
-    private static int y3 = 89;
-    private static int z3 = 69;
+	private static double x = 10.0;
+	private static double y = 5.0;
+	private static double z = 3.0;
+	private static int x1 = 8;
+	private static int y1 = 7;
+//	private static int z1 = 10;
+	private static int x2 = 100;
+	private static int y2 = 57;
+//	private static int z2 = 129;
+	private static int x3 = 45;
+	private static int y3 = 89;
+	private static int z3 = 69;
 
-    public static void main(String[] args) {
-        // area ... Fläche
-        System.out.println("Square area");
-        System.out.println("x * x = " + x * x);
-        System.out.println("x1 * x1 = " + x1 * x1);
-        System.out.println("x2 * x2 = " + x2 * x2);
-        System.out.println("y * y = " + y * y);
+	/*** Multiplikation Double Methode ***/
+	public static double multiDouble(double x, double y) {
+		return x * y;
+	}
 
-        // perimeter ... Umfang
-        System.out.println("Square perimeter");
-        System.out.println("4 * x = " + 4 * x);
-        System.out.println("4 * x1 = " + 4 * x1);
-        System.out.println("4 * x2 = " + 4 * x2);
-        System.out.println("4 * y = " + 4 * y);
+	/*** Multiplikation Int Methode ***/
+	public static int multiInt(int x, int y) {
+		return x * y;
+	}
 
-        System.out.println("Rectangle area");
-        System.out.println("x * y = " + x * y);
-        System.out.println("x1 * y1 = " + x1 * y1);
-        System.out.println("x2 * y2 = " + x2 * y2);
-        System.out.println("x3 * y3 = " + x3 * y3);
+	/*** Addition Int Methode ***/
+	public static int addInt(int x, int y) {
+		return x + y;
+	}
 
-        System.out.println("Rectangle perimeter");
-        System.out.println("x + y = " + x + y);
-        System.out.println("x1 + y1 = " + x1 + y1);
-        System.out.println("x2 + y2 = " + x2 + y2);
-        System.out.println("x3 + y3 = " + x3 + y3);
+	/*** Addition Double Methode ***/
+	public static double addDouble(double x, double y) {
+		return x + y;
+	}
 
-        System.out.println("We can also calculate some volumes");
-        /*
-            z is our height
-            y is our radius
-         */
-        System.out.println("Zone of a sphere");
-        double v = (Math.PI * z * (3 * Math.pow(y, 2) + 3 * Math.pow(x, 2) + Math.pow(z, 2))) / 6;
-        System.out.println(v);
+	/*** Text System.out.println herausheben ***/
+	public static void print(String txt) {
+		System.out.println(txt);
+	}
 
-        System.out.println("Sphere with cylinder");
-        System.out.println(Math.PI * Math.pow(z, 3) / 6);
+	public static void main(String[] args) {
 
-        System.out.println("Ungula");
-        System.out.println((double) (2 * x3 * z3) / 3);
-    }
+//		/*** Eingaben einlesen ***/
+//		Scanner myScanner = new Scanner(System.in);
+//		
+//			System.out.println("(Type Double) Enter a number for *x*: ");
+//			String input = myScanner.nextLine();
+//			double number = Double.parseDouble(input);
+//			System.out.println("number: " + input);
+//			
+
+		// area ... Fläche
+		print("Square area");
+		print("x * x = " + multiDouble(x, x));
+		print("x1 * x1 = " + multiInt(x1, x1));
+		print("x2 * x2 = " + multiInt(x2, x2));
+		print("y * y = " + multiDouble(y, y));
+
+		// perimeter ... Umfang
+		print("Square perimeter");
+		print("4 * x = " + multiDouble(4, x));
+		print("4 * x1 = " + multiInt(4, x1));
+		print("4 * x2 = " + multiInt(4, x2));
+		print("4 * y = " + multiDouble(4, y));
+
+		print("Rectangle area");
+		print("x * y = " + multiDouble(x, y));
+		print("x1 * y1 = " + multiInt(x1, y1));
+		print("x2 * y2 = " + multiInt(x2, y2));
+		print("x3 * y3 = " + multiInt(x3, y3));
+
+		print("Rectangle perimeter");
+		print("x + y = " + addDouble(x, y));
+		print("x1 + y1 = " + addInt(x1, y1));
+		print("x2 + y2 = " + addInt(x2, y2));
+		print("x3 + y3 = " + addInt(x3, y3));
+
+		print("We can also calculate some volumes");
+		/*
+		 * z is our height y is our radius
+		 */
+		print("Zone of a sphere");
+		double v = (Math.PI * z * (3 * Math.pow(y, 2) + 3 * Math.pow(x, 2) + Math.pow(z, 2))) / 6;
+		System.out.println(v);
+
+		System.out.println("Sphere with cylinder");
+		System.out.println(Math.PI * Math.pow(z, 3) / 6);
+
+		System.out.println("Ungula");
+		System.out.println((double) (2 * x3 * z3) / 3);
+	}
 }
